@@ -5,28 +5,30 @@ import MenuIcon from '@material-ui/icons/Menu'
 import { AccountCircle,VideoCall,Apps, MoreVert } from '@material-ui/icons';
 import LogoPreto from '../assets/logopreto.png'
 
+
 const useStyles = makeStyles((theme)=>({
-   root:{
-    height:'100vh',
-  }, 
-  icons:{
-    paddingRight: theme.spacing(5),
-  },menuIcon:{
-    paddingRight:theme.spacing(5),
-    paddingLeft:theme.spacing(4)
+    root:{
+     height:'100vh',
+   }, 
+   icons:{
+     paddingRight: theme.spacing(5),
+   },menuIcon:{
+     paddingRight:theme.spacing(5),
+     paddingLeft:theme.spacing(4)
+ 
+   },
+   grow:{
+     flexGrow:1
+   },logo:{
+     height:25,
+     cursor:'pointer'
+   }
+ }));
+ 
+const Header = () => {
 
-  },
-  grow:{
-    flexGrow:1
-  },logo:{
-    height:25,
-    cursor:'pointer'
-  }
-}));
-
-
-const  Home = () => {
     const classes = useStyles()
+
   return (
     <div className={classes.root}>
     <Box sx={{ flexGrow: 1 }}>
@@ -71,4 +73,4 @@ const  Home = () => {
   )
 }
 
-export default Home
+export default Header

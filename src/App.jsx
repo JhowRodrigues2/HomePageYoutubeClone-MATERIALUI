@@ -1,11 +1,11 @@
 import { ThemeProvider, createTheme, makeStyles } from "@mui/material";
-import Home from "./components/Home";
+import Header from "./components/Header";
 
 
 
 function App() {
   const theme = createTheme({
-    spacing:4,
+    spacing: 4,
     palette: {
       primary: {
         main: "#f44336",
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <Home/>
+    <Header/>
     </ThemeProvider>
   );
 }
