@@ -1,6 +1,7 @@
-import { ThemeProvider, createTheme, makeStyles } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
+import GlobalProvider from "./context";
 
 
 
@@ -18,10 +19,12 @@ function App() {
   });
 
   return (
+    <GlobalProvider>
     <ThemeProvider theme={theme}>
     <Header/>
     <Menu/>
     </ThemeProvider>
+    </GlobalProvider>
   );
 }
 

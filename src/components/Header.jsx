@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { makeStyles } from '@mui/styles';
 import { AppBar,Box,Toolbar,IconButton, Button} from '@mui/material';
 import MenuIcon from '@material-ui/icons/Menu'
 import { AccountCircle,VideoCall,Apps, MoreVert } from '@material-ui/icons';
 import LogoPreto from '../assets/logopreto.png'
+import { GlobalContext } from '../context';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -15,7 +16,6 @@ const useStyles = makeStyles((theme)=>({
    },menuIcon:{
      paddingRight:theme.spacing(5),
      paddingLeft:theme.spacing(4)
- 
    },
    grow:{
      flexGrow:1
@@ -26,13 +26,13 @@ const useStyles = makeStyles((theme)=>({
  }));
  
 const Header = () => {
-
+const {handleDrawerToggle} = useContext(GlobalContext)
     const classes = useStyles()
 
   return (
     <div className={classes.root}>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar color='inherit' elevation={0}>
+    
+      <AppBar color='inherit' elevation={0} sx={{zIndex:1201}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -40,6 +40,7 @@ const Header = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={handleDrawerToggle}
           >
            <MenuIcon />
           </IconButton>
@@ -68,7 +69,7 @@ const Header = () => {
           <Button variant='outlined' color="secondary" startIcon={<AccountCircle/>}>Fazer Login</Button>
         </Toolbar>
       </AppBar>
-    </Box>
+  
     </div>
   )
 }
