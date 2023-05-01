@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { makeStyles } from '@mui/styles';
-import { AppBar,Box,Toolbar,IconButton, Button} from '@mui/material';
+import { AppBar,TextField,Toolbar, IconButton, Button} from '@mui/material';
 import MenuIcon from '@material-ui/icons/Menu'
 import { AccountCircle,VideoCall,Apps, MoreVert } from '@material-ui/icons';
 import LogoPreto from '../assets/logopreto.png'
@@ -31,7 +31,6 @@ const {handleDrawerToggle} = useContext(GlobalContext)
 
   return (
     <div className={classes.root}>
-    
       <AppBar color='inherit' elevation={0} sx={{zIndex:1201}}>
         <Toolbar>
           <IconButton
@@ -63,6 +62,7 @@ const {handleDrawerToggle} = useContext(GlobalContext)
             color="inherit"
             className={classes.icons}
           >
+                 
            <MoreVert />
           </IconButton>
       

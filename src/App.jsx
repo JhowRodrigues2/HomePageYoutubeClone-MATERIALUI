@@ -2,8 +2,7 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import GlobalProvider from "./context";
-
-
+import Content from "./components/Content";
 
 function App() {
   const theme = createTheme({
@@ -20,9 +19,11 @@ function App() {
 
   return (
     <GlobalProvider>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
+      <div style={{display:'flex'}}>
     <Header/>
     <Menu/>
+    <Content/></div>
     </ThemeProvider>
     </GlobalProvider>
   );
