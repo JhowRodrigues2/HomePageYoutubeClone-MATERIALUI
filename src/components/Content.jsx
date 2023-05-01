@@ -8,7 +8,6 @@ import Thumb5 from '../assets/thumb5.png'
 import Thumb6 from '../assets/thumb6.png'
 import Thumb7 from '../assets/thumb7.png'
 import Thumb8 from '../assets/thumb8.png'
-import Avatar from '../assets/avatar.jpeg'
 const Content = () => {
     const videos = [
         {
@@ -18,7 +17,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '11 mi de visualizações',
           date: 'há 1 semana',
-          avatar:`${Avatar}`,
           thumb: `${Thumb1}`,
         },
         {
@@ -28,7 +26,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '957 mil visualizações',
           date: 'há 24 horas',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb2}`,
         },
         {
@@ -38,7 +35,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '106 mil visualizações',
           date: 'há 1 semana',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb3}`,
         },
         {
@@ -48,7 +44,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '5,6 mi de visualizações',
           date: 'há 1 ano',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb4}`,
         },
         {
@@ -67,7 +62,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '233 mil visualizações',
           date: 'há 1 mês',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb6}`,
         },
         {
@@ -77,7 +71,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '118 mil visualizações',
           date: 'há 3 dias',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb7}`,
         },
         {
@@ -87,7 +80,6 @@ const Content = () => {
           channel: 'Jhow Rodrigues',
           views: '1,9 mi de visualizações',
           date: 'há 2 semanas',
-          avatar: '/images/avatar.jpeg',
           thumb: `${Thumb8}`,
         },
       ];
@@ -99,21 +91,25 @@ const Content = () => {
       <Grid container spacing={4}>
         {videos.map((item, index) => (
           <Grid item lg={3} md={4} sm={6} xs={12} key={index}>
-            <Box>
+            <Box >
               <img
                 style={{ width: "100%" }}
                 alt={item.title}
                 src={item.thumb}
               />
             </Box>
-            <Typography
-              style={{ fontWeight: 600 }}
+
+            <Typography 
+              style={{ fontWeight: 600, display:'flex' }}
               gutterBottom
               variant="body1"
               color="textPrimary"
             >
+            <img src={'https://avatars.githubusercontent.com/u/107954865?v=4'} alt="" style={{width:30, height:30, borderRadius:'50%',marginTop:3, marginRight:10, cursor:'pointer'}}/>
+
               {item.title}
             </Typography>
+            
             <Typography display="block" variant="body1"  color="textSecondary"  >
               {item.channel}
             </Typography>

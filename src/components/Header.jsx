@@ -44,7 +44,6 @@ const {handleDrawerToggle} = useContext(GlobalContext)
            <MenuIcon />
           </IconButton>
           <img src={LogoPreto} alt="logo do YouTube"  className={classes.logo}/>
-
           <div className={classes.grow}/>
           <IconButton
             color="inherit"
